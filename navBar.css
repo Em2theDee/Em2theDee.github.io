@@ -1,0 +1,179 @@
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    z-index: 2;
+    gap: 8px;
+
+    
+    background-color: rgba(74, 73, 71, 1);  
+    backdrop-filter: blur(30px);
+    border-radius: 18px;
+    margin-bottom: 1.4vw;
+    
+
+    /**/
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp1 0.9s ease forwards, moveUp1 0.9s ease forwards;
+}
+
+.nav-button {
+    width: 150px;
+    height: 4px;
+    font-size: 10px;
+    font-family: pretendard;
+    white-space: nowrap;
+    padding: 9px 0px;
+    margin: 8px 0;
+    color: #fff;
+    background-color: #222222; 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:first-child {
+    margin-left: 8px; /* Adjust padding for the first box */
+}
+
+.nav-button:last-child {
+    margin-right: 8px; /* Adjust padding for the last box */
+}
+
+.nav-button:hover {
+    background-color: #6037AF;
+}
+
+@keyframes fadeInUp1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp1 {
+    from {
+        transform: translateX(30px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width: 1600px) {
+	
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1300px) {	
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 0px 29vw;
+    gap: 6px;
+    background-color: rgba(74, 73, 71, 0.33);  
+    backdrop-filter: blur(30px);
+    border-radius: 18px;
+    margin-bottom: 20px;
+    /**/
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateX(40px);
+    animation: fadeInUp1 0.9s ease forwards, moveUp1 0.9s ease forwards;
+}
+
+.nav-button {
+    white-space: nowrap;
+    padding: 9px 0px;
+    margin: 6px 0;
+    font-size: 16px;
+    background-color: #222222; 
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:first-child {
+    margin-left: 6px;
+}
+
+.nav-button:last-child {
+    margin-right: 6px;
+}
+
+.nav-button:hover {
+    background-color: #6037AF;
+}
+    
+}
+
+
+
+@media  (max-width: 800px) {
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 0px 28px;
+    gap: 3px;
+    background-color: rgba(74, 73, 71, 0.33);  
+    backdrop-filter: blur(30px);
+    border-radius: 18px;
+    margin-bottom: 5vw;
+    /**/
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateX(40px);
+    animation: fadeInUp1 0.9s ease forwards, moveUp1 0.9s ease forwards;
+}
+
+.nav-button {
+    white-space: nowrap;
+    padding: 8px 0px;
+    margin: 4px 0;
+    font-size: 13px;
+    background-color: #222222; 
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:first-child {
+    margin-left: 4px; /* Adjust padding for the first box */
+}
+
+.nav-button:last-child {
+    margin-right: 4px; /* Adjust padding for the last box */
+}
+
+.nav-button:hover {
+    background-color: #6037AF;
+}
+    
+}
+
+.grid-container {
+    padding: 50px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-gap: 20px; /* Gap between columns */
+}
+
+.column:first-child {
+    text-align: left; /* Align text in both columns to the left */
+}
+
+.column:last-child {
+    text-align: right; /* Align text in the last column to the right */
+}
