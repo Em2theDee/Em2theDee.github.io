@@ -6,41 +6,63 @@
   <title>Text to IPA Generator</title>
   <link rel="stylesheet" href="/lib/styles.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  
+  <script src="../lib/text-to-ipa.js"></script>
+  <script src="../lib/converter-form.js"></script>
+  <script> window.onload = TextToIPA.loadDict('../lib/ipadict.txt');  </script>
+
 </head>
 
 <body>
-  <script src="../lib/text-to-ipa.js"></script>
-  <script src="../lib/converter-form.js"></script>
-  <script src="../lib/fall back font.js"></script>
+  <div class="centre-flexbox-column first-section"> <!--First Section Parent-->
+    
+    <div class="left-flexbox-column title-all">
 
+      <div><h1>N<span class="flip-v">v</span><span class="v-with-diacritic">v̄</span> Britanik Skript.</h1></div>
+      <div class="left-flexbox-row image-subtitle"> <!--Image and explanation-->
 
-  <script>
-    window.onload = TextToIPA.loadDict('../lib/ipadict.txt');
-  </script>
+        <div class="image"></div><!--image-->
 
-  <p>Use the following text areas to convert English to it's IPA equivalent.</p>
-  <p>This is NOT case sensitive and punctuation is ignored.</p>
-  <br />
-  <p>Note: If you are using chrome and this is being ran locally, the dictionary will not load due to the way Chrome handles XHTTP Requests. It does handle them normally on proper websites. Check out a live example <a href="http://surrsur.us/projects/ipa/english-to-ipa.html">here</a></p>
-  <br />
-  
-  <div id="js-text-to-ipa-form">
+        <div class="left-flexbox-column subtitle-text"> <!--Subtitle and explanation-->
 
-    <ul style="list-style-type: none;">
-      <li><textarea id="ipa-in" placeholder="Write text here" rows="4" cols="50"></textarea></li>
-      <li class="button"><button type="button" id="js-ipa-submit" onClick="ConverterForm.convert('ipa-in', 'ipa-out', 'ipa-err')">Convert!</button></li>
-      <li><textarea readonly id="ipa-out" placeholder="aʊtpʊt gəʊz hɪə" rows="4" cols="50"></textarea></li>
-    </ul>
+          <div><h4> What is the New Britannic Script? </h4></div>
 
-    <ul style="list-style-type: none;">
-      <li><noscript><p>This converter will not work unless Javascript is enabled.</p></noscript></li>
-      <li>
-        <div id="ipa-err">
-          <p>Errors will go here if you make any. (This will be overwritten)</p>
+          <div><p> New Britannic is a modern script designed specifically for Standard British English; crafted to fit the language perfectly, like a glove, and eliminate the inconsistencies and frustrations of traditional English spelling. Say farewell to the confusion of words like through, rough, though, thought, tough, thorough, plough, bough, cough, enough, hiccough, and slough. </p></div>
+        
         </div>
-      </li>
-    </ul>
+      </div>
+    </div> 
 
+  
+    <div class="centre-flexbox-column input-and-button"> <!--Input box + Button-->
+
+        <textarea class="roundbox" id="ipa-in" placeholder="Write text here" rows="4" cols="50"></textarea>  <!--IPA input field-->
+
+        <button class="button roundbox" type="button" id="js-ipa-submit" onClick="ConverterForm.convert('ipa-in', 'ipa-out', 'ipa-err')">Convert!</button> <!--Translate Button-->
+
+    </div>
+
+    
+  </div>
+  <div class="centre-flexbox-column roundbox ">
+    <textarea class="roundbox" readonly id="ipa-out" placeholder="aʊtpʊt gəʊz hɪə" rows="4" cols="50"></textarea> <!--IPA output field-->
+  </div>
+
+
+  <div style="list-style-type: none;">
+
+    <div><noscript><p>This converter will not work unless Javascript is enabled.</p></noscript></div>
+
+    <div>
+      <div id="ipa-err">
+
+        <p>Errors will go here if you make any. (This will be overwritten)</p>
+
+      </div>
+    </div>
   </div>
 
 </body>
