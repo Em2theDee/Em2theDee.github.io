@@ -14,7 +14,7 @@
 
 h1{
     font-family: "Playfair", serif;
-    font-size: 120px;
+    font-size: 6vw;
     font-weight: 900;
     letter-spacing: -3%;
     font-variation-settings:"wdth" 100, "wght" 900, "opsz" 13;
@@ -50,7 +50,7 @@ h5{
 h6{
     font-family: 'Arial New English', Arial, sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     font-feature-settings: 'liga' on, 'dlig' on, 'calt' on;
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
     letter-spacing: 0.8px;
@@ -61,7 +61,7 @@ h6{
 p{
     font-family: "Arial", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.5px;
     line-height: 150%;
     text-align: justify;
@@ -112,13 +112,22 @@ body{
     padding: 0 250px;
 }
 
+
 .first-section{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.nav{
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
 }
 
 .title-all{
+    margin-top: 75px;
     gap: 64px;
 }
 
