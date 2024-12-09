@@ -130,7 +130,7 @@ body{
 
 .flip-v {
     display: inline-block;
-    transform: scale(-1, -1) translateY(-19px); 
+    transform: scale(-1, -1) translateY(-1vw); 
     position: relative;
     margin-right: -10px; 
   }
@@ -194,7 +194,7 @@ body{
     margin: 60px;
     padding: 64px;
     background-color: rgb(172, 172, 172);
-    gap: 20px;
+    gap: 48px;
 }
 
 .test {
@@ -222,7 +222,7 @@ body{
     background: none;
     overflow: visible;
 
+    overflow-x: hidden;
     text-align: center;
     width: 100%;
 }
-
