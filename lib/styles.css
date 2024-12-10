@@ -12,6 +12,14 @@
 
 /* ~~ General Classes ~~ */
 
+
+:root {
+    --blue: #00237D;
+    --orange: #FC876D;
+    --green: #C4FC6D;
+}
+
+
 h1{
     font-family: "Playfair", serif;
     font-size: 6vw;
@@ -114,6 +122,8 @@ p{
 html,
 body{
     padding: 0;
+    margin: 0;
+    background-color: var(--blue);
 }
 
 .first-section{
@@ -122,17 +132,20 @@ body{
     box-sizing: border-box;
     justify-content: flex-start;
     padding: 0 250px;
+    background-color: var(--blue)
 }
 
 .nav{
     justify-content: space-between;
     width: 100%;
     height: 50px;
+    color: white;
 }
 
 .title-all{
     margin-top: 75px;
     gap: 64px;
+    color: var(--variable-name);
 }
 
 .flip-v {
@@ -169,6 +182,15 @@ body{
     gap: 16px;
 }
 
+#title,
+#subtitle{
+    color: var(--green);
+}
+
+#bodycopy{
+    color: white;
+}
+
 .input-and-button{
     gap: 24px;
     width: 100%;
@@ -195,12 +217,17 @@ body{
 
     width: 100%;
     height: 80px;
+    background-color: var(--orange);
+    color: black;
+    resize: none;
+    border: none;
+    outline: none;
 }
 
 .ipaout-plaque {
     margin: 60px;
     padding: 64px;
-    background-color: rgb(172, 172, 172);
+    background-color: var(--orange);
     gap: 48px;
 }
 
@@ -209,7 +236,7 @@ body{
 }
 
 .image2 {
-    background-color: black;
+    background-color: var(--blue);
     width: 50px;
     height: 50px;
 }
@@ -221,7 +248,7 @@ body{
     font-feature-settings: 'liga' on, 'dlig' on, 'calt' on;
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
     letter-spacing: 0.8px;
-    color: #333;
+    color: black;
 
     resize: none;
     border: none;
@@ -238,6 +265,10 @@ body{
 
 }
 
+#errortext{
+    color: white;
+}
+
 .about-page-start{
     justify-content: start;
     align-items: flex-start;
@@ -251,7 +282,7 @@ body{
 }
 
 .image3{
-    background-color: black;
+    background-color: white;
     width: 20%;
     aspect-ratio: 1;
     flex-shrink: 0;
@@ -269,4 +300,12 @@ body{
     gap: 32px;
     justify-content: start;
     align-items: flex-start;
+}
+
+#title-for-paragraph{
+    color: var(--green);
+}
+
+#body-for-paragraph{
+    color: white;
 }
