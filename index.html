@@ -1,23 +1,34 @@
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
   <meta charset="utf-8">
   <title>Text to IPA Generator</title>
-  <link rel="stylesheet" href="/lib/styles.css">
+  <link rel="icon" href="../images/favi.ico" type="image/x-icon">
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/lib/styles.css">
   
   <script src="../lib/text-to-ipa.js"></script>
   <script src="../lib/script.js"></script>
   <script src="../lib/converter-form.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
   <script> window.onload = TextToIPA.loadDict('../lib/ipadict.txt');  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize/4.0.0/autosize.min.js"></script>
 </head>
 
 <body>
+
+<div id="loading-screen">
+  <video autoplay muted playsinline id="loading-animation">
+    <source src="images/Sword 2.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
   <div class="centre-flexbox-column first-section"> <!--First Section Parent-->
     
@@ -49,12 +60,12 @@
 
         <textarea class="roundbox" id="ipa-in" placeholder="Write text here" rows="3" cols="50"></textarea>  <!--IPA input field-->
 
-        <button class="button roundbox" type="button" id="js-ipa-submit" onClick="ConverterForm.convert('ipa-in', 'ipa-out', 'ipa-err')">Translate</button> <!--Translate Button-->
-
+        <button class="button roundbox" type="button" id="js-ipa-submit"
+        onClick="ConverterForm.convert('ipa-in', 'ipa-out', 'ipa-err'); document.getElementById('ipa-err').scrollIntoView({behavior: 'smooth', block: 'end' });">Translate</button> <!--Translate Button-->
     </div>
   </div>
 
-  <div class="centre-flexbox-row roundbox ipaout-plaque">
+  <div id="ipaout-plaque" class="centre-flexbox-row roundbox ipaout-plaque">
 
     <div class="centre-flexbox-column test">
 
@@ -100,8 +111,14 @@
           Practical, inclusive, and forward-thinking, the New Britannic Script honors the past while offering a simplified and elegant path for the future of English communication.</p></div>
       </div>
     </div>
-  </div>
 
+  </div>
+  
+  <div class="centre-flexbox-column phonetic-chart">
+    <div class="phonetic-chart-text"><h3>The Phonetic Chart</h3></div>
+    <div class="roundbox image4"> </div>
+  </div>
+  
 </body>
 
 </html>
