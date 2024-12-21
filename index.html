@@ -58,29 +58,30 @@
   
     <div class="centre-flexbox-column input-and-button"> <!--Input box + Button-->
 
-        <textarea class="roundbox" id="ipa-in" placeholder="Write text here" rows="3" cols="50"></textarea>  <!--IPA input field-->
+      <textarea class="roundbox" id="ipa-in" placeholder="Write text here" rows="3" cols="50"></textarea>  <!--IPA input field-->
 
-        <button class="button roundbox" type="button" id="js-ipa-submit"
-        onClick="ConverterForm.convert('ipa-in', 'ipa-out', 'ipa-err'); document.getElementById('ipa-err').scrollIntoView({behavior: 'smooth', block: 'end' });">Translate</button> <!--Translate Button-->
+      <button class="button roundbox" type="button" id="js-ipa-submit"
+        onClick="ConverterForm.convert('ipa-in', 'ipa-out', 'ipa-err');">Translate
+      </button> <!--Translate Button-->
+
     </div>
   </div>
+    <div id="ipaout-plaque" class="centre-flexbox-column roundbox ipaout-plaque">
 
-  <div id="ipaout-plaque" class="centre-flexbox-row roundbox ipaout-plaque">
+      <div class="centre-flexbox-row test">
 
-    <div class="centre-flexbox-column test">
-
-      <div class="image2"></div>
-      <div class="image2"></div>
-    </div>
+        <div class="image2"></div>
+        <div class="image2"></div>
+      </div>
   
-    <textarea class="roundbox" id="ipa-out" readonly placeholder="aʊtpʊt gəʊz hɪə" rows="4"></textarea>
+      <textarea class="roundbox" id="ipa-out" readonly placeholder="aʊtpʊt  gəʊz hɪə" rows="1"></textarea>
   
-    <div class="centre-flexbox-column test">
+      <div class="centre-flexbox-row test">
 
-      <div class="image2"></div>
-      <div class="image2"></div>
+        <div class="image2"></div>
+        <div class="image2"></div>
+      </div>
     </div>
-  </div>
 
   <div style="list-style-type: none;">
 
