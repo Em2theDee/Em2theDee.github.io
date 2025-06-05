@@ -420,6 +420,8 @@ body{
     font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
     letter-spacing: -3%;
     line-height: 150%;
+    text-decoration: none;
+    
 
     color: black !important;
 
