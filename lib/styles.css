@@ -421,7 +421,7 @@ body{
     letter-spacing: -3%;
     line-height: 150%;
 
-    color: black;
+    color: black !important;
 
     /* resize: vertical; */
     cursor: pointer;
